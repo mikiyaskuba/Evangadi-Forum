@@ -1,0 +1,195 @@
+:global(body) {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	overflow-y: scroll;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	/* background-color: #f0f2f5; */
+
+	font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+		Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.container {
+	display: flex;
+	width: 90%;
+	max-width: 1500px;
+	/* background-color: #fff; */
+	
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 80px auto;
+}
+
+.loginSection,
+.infoSection {
+	padding: 40px;
+	flex: 1;
+}
+
+.loginSection {
+	background-color: #f7f9fc;
+	text-align: center;
+}
+
+.loginSection h2 {
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+.loginSection p {
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+.loginSection a {
+	color: #f65b2a;
+	text-decoration: none;
+}
+
+.loginSection a:hover {
+	text-decoration: underline;
+}
+
+.loginSection form {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+}
+
+.loginSection input {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 20px;
+	font-size: 14px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.loginSection .forgotPassword {
+	align-self: flex-end;
+	margin-bottom: 20px;
+}
+
+.buttonLog {
+	padding: 20px;
+	background-color: #0b5ed7;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.buttonLog:hover {
+	background-color: #357ae8;
+}
+
+.infoSection {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.infoSection h2 {
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+.infoSection h1 {
+	margin-bottom: 20px;
+	font-size: 36px;
+	color: #e44e2a;
+}
+
+.infoSection p {
+	margin-bottom: 20px;
+	font-size: 20px;
+	color: #736565;
+	padding: 0 20px;
+}
+
+.createAccountButton {
+	display: inline-block;
+	padding: 20px 20px;
+	background-color: #fe8402;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	font-size: 20px;
+	margin-top: 10px;
+	transition: background-color 0.3s ease;
+}
+
+.createAccountButton:hover {
+	background-color: #d94d26;
+}
+
+.errorMessage {
+	color: red;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+.passwordContainer {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.passwordContainer input {
+	padding-right: 40px;
+	width: 100%;
+}
+
+.passwordToggleBtn {
+	position: absolute;
+	right: 10px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.container {
+		flex-direction: column;
+		width: 95%;
+		margin: 20px auto;
+	}
+
+	.infoSection h1 {
+		font-size: 28px;
+	}
+
+	.infoSection p {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 480px) {
+	.loginSection h2,
+	.infoSection h2 {
+		font-size: 20px;
+	}
+
+	.loginSection p,
+	.infoSection p {
+		font-size: 14px;
+	}
+
+	.buttonLog,
+	.createAccountButton {
+		padding: 15px;
+		font-size: 16px;
+	}
+}

@@ -1,0 +1,160 @@
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1500px;
+    /* background-color: #fff; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    /* height: 90vh; */
+    margin-left: 100px;
+    margin-top: 50px;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.signupSection,
+.infoSection {
+    padding: 40px;
+    flex: 1;
+}
+
+.signupSection {
+    /* background-color: #f7f9fc; */
+    text-align: center;
+}
+
+.signupSection h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.signupSection p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.signupSection a {
+    color: #f65b2a;
+    text-decoration: none;
+}
+
+.signupSection a:hover {
+    text-decoration: underline;
+}
+
+.signupSection form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.signupSection input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.signupSection .dFlex {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.signupSection .col6 {
+    
+    width: 50%;
+}
+
+.signupSection .col6 input {
+    width: 100%;
+}
+
+.signupSection label {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.signupSection button {
+    padding: 20px;
+    background-color: #0B5ED7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signupSection button:hover {
+    background-color: #357ae8;
+}
+
+.infoSection h2 {
+    margin-bottom: 50px;
+    font-size: 24px;
+}
+
+.infoSection h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #e44e2a;
+}
+
+.infoSection p {
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: #736565;
+}
+
+.createAccountButton {
+    display: inline-block;
+    padding: 20px 20px;
+    background-color: #FE8402;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.createAccountButton:hover {
+    background-color: #d94d26;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+	.container {
+		flex-direction: column;
+		width: 95%;
+		margin: 20px auto;
+	}
+
+	.infoSection h1 {
+		font-size: 28px;
+	}
+
+	.infoSection p {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 480px) {
+	.signupSection h2,
+	.infoSection h2 {
+		font-size: 20px;
+	}
+
+	.signupSection p,
+	.infoSection p {
+		font-size: 14px;
+	}
+
+	.buttonLog,
+	.createAccountButton {
+		padding: 15px;
+		font-size: 16px;
+	}
+}
