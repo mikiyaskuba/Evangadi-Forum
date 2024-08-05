@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 import {
 	BrowserRouter as Router,
 	Route,
 	Routes,
 	Navigate,
-} from 'react-router-dom';
-import Login from '../pages/Login/Login';
-import SignUp from '../pages/Signup/Signup';
-import Layout from '../components/Layout/Layout';
-import Home from '../pages/Home/Home';
-import ProtectedRoute from '../components/ProtectedRoute/ProtectedRoute';
-// import AskQuestion from '../components/AskQuestion/AskQuestion';
+} from "react-router-dom";
+import Login from "../pages/Login/Login";
+import SignUp from "../pages/Signup/Signup";
+import Layout from "../components/Layout/Layout";
+import Home from "../pages/Home/Home";
+import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
+import AskQuestion from "../components/AskQuestion/AskQuestion";
 // import AnswerAndQuestionDetail from '../components/Answare/AnswerAndQuestionDetail';
 
 const AppRoutes = () => {
@@ -28,7 +28,7 @@ const AppRoutes = () => {
 							</ProtectedRoute>
 						}
 					/>
-					{/* <Route
+					<Route
 						path="/askquestion"
 						element={
 							<ProtectedRoute>
@@ -36,14 +36,15 @@ const AppRoutes = () => {
 							</ProtectedRoute>
 						}
 					/>
-					<Route
+					{/* <Route
 						path="/question/:id"
 						element={
 							<ProtectedRoute>
 								<AnswerAndQuestionDetail />
 							</ProtectedRoute>
 						}
-					/> */}
+					/>{" "} */}
+
 					<Route path="*" element={<Navigate to="/" />} />
 				</Routes>
 			</Layout>
