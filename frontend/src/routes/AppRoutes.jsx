@@ -1,4 +1,4 @@
-import React from "react";
+
 import {
 	BrowserRouter as Router,
 	Route,
@@ -11,7 +11,7 @@ import Layout from "../components/Layout/Layout";
 import Home from "../pages/Home/Home";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 import AskQuestion from "../components/AskQuestion/AskQuestion";
-// import AnswerAndQuestionDetail from '../components/Answare/AnswerAndQuestionDetail';
+import AnswerAndQuestionDetail from '../components/Answer/AnswerAndQuestionDetail';
 
 const AppRoutes = () => {
 	return (
@@ -36,14 +36,14 @@ const AppRoutes = () => {
 							</ProtectedRoute>
 						}
 					/>
-					{/* <Route
+					<Route
 						path="/question/:id"
 						element={
 							<ProtectedRoute>
 								<AnswerAndQuestionDetail />
 							</ProtectedRoute>
 						}
-					/>{" "} */}
+					/>{" "}
 
 					<Route path="*" element={<Navigate to="/" />} />
 				</Routes>

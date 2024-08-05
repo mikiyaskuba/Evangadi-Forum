@@ -1,11 +1,13 @@
 const mysql2 = require("mysql2");
 
 const dbConnection = mysql2.createPool({
-  host: "localhost",
-  user: "abera1",
-  password: "123456",
-  database: "evangadi db1",
-  connetionLimit: 10,
+	port: "8889",
+	host: "localhost",
+	user: "evangadiadmin",
+	password: "qwerty",
+
+	database: "evangadi1",
+	connetionLimit: 10,
 });
 
 // dbconnection.execute("select 'test'", (err, result) => {
