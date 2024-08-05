@@ -1,7 +1,7 @@
-import React from 'react';
-import Header from '../Header/Header';
-import './Layout.css'; // Custom CSS for additional styling if needed
-import Footer from '../Footer/Footer';
+import React from "react";
+import Header from "../Header/Header";
+import "./Layout.css"; // Custom CSS for additional styling if needed
+import Footer from "../Footer/Footer";
 
 const Layout = ({ children }) => {
 	return (

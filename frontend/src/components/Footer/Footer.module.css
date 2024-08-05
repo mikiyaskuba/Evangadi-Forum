@@ -1,74 +1,75 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 .footer {
-    background-color: #3B455A;
-    color: #fff;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 25px;
+	background-color: #3b455a;
+	color: #fff;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 25px;
 }
 
 .footer .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ff9800;
-    margin: 0 50px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #ff9800;
+	margin: 0 50px;
 }
 
-.footer .social-links {
-    display: flex;
-    gap: 35px;
-    padding-top: 50px;
+.footer .socialLinks {
+	display: flex;
+	gap: 35px;
+	padding-top: 50px;
 }
 
-.footer .social-links a {
-    display: inline-block;
-    width: 42px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #fff;
-    color: #333;
-    line-height: 30px;
-    text-align: center;
-    transition: all 0.3s ease;
-    padding-top: 3px;
-   
- 
+.footer .socialLinks a {
+	display: inline-block;
+	width: 42px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #fff;
+	color: #333;
+	line-height: 30px;
+	text-align: center;
+	transition: all 0.3s ease;
+	padding-top: 3px;
 }
 
-.footer .social-links a:hover {
-    background-color: #ff9800;
-    color: #fff;
+.footer .socialLinks a:hover {
+	background-color: #ff9800;
+	color: #fff;
 }
 
-.footer .links, .footer .contact {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 0 50px;
+.footer .links,
+.footer .contact {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 0 50px;
 }
 
-.footer .links a, .footer .contact a {
-    color: #fff;
-    text-decoration: none;
-     font-size: 15px;
+.footer .links a,
+.footer .contact a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 15px;
 }
 
-.footer .links a:hover, .footer .contact a:hover {
-    text-decoration: underline;
+.footer .links a:hover,
+.footer .contact a:hover {
+	text-decoration: underline;
 }
 
 @media (max-width: 778px) {
-    .footer {
-        flex-direction: column;
-        gap: 20px;
-    }
+	.footer {
+		flex-direction: column;
+		gap: 20px;
+	}
 }

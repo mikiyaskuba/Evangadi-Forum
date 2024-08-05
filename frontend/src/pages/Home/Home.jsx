@@ -1,11 +1,10 @@
-// Home.js
-import React, { useEffect, useState } from 'react';
-import { useAuth } from '../../Auth/AuthContext';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserTie } from '@fortawesome/free-solid-svg-icons';
-import axios from 'axios';
-import styles from './Home.module.css';
+import "./Home.css";
+import React, { useEffect, useState } from "react";
+import { useAuth } from "../../Auth/AuthContext";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserTie } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
 
 const Home = () => {
 	const { user } = useAuth();
@@ -14,11 +13,14 @@ const Home = () => {
 	useEffect(() => {
 		const fetchQuestions = async () => {
 			try {
-				const response = await axios.get('http://localhost:5500/api/questions');
+				const response = await axios.get(
+					"http://localhost:5500/api/questions/questions"
+				);
 				setQuestions(response.data.questions);
+
 				console.log(questions);
 			} catch (error) {
-				console.error('Error fetching questions:', error);
+				console.error("Error fetching questions:", error);
 			}
 		};
 
@@ -26,43 +28,38 @@ const Home = () => {
 	}, []);
 
 	return (
-		<div className={styles['home-container']}>
-			<header className={styles['home-header']}>
-				<button className={styles['ask-question-btn']}>
-					<Link className={styles['link']} to={'/askquestion'}>
-						{' '}
-						Ask Question{' '}
-					</Link>{' '}
+		<div className="home-container">
+			<header className="home-header">
+				<button className="ask-question-btn">
+					<Link className="link" to={"/askquestion"}>
+						Ask Question
+					</Link>
 				</button>
-				<div className={styles['welcome-message']}>
-					Welcome: {user ? user.email.split('@')[0] : 'Guest'}
+				<div className="welcome-message">
+					Welcome: {user ? user.email.split("@")[0] : "Guest"}
 				</div>
 			</header>
 
-			<section className={styles['questions-section']}>
+			<section className="questions-section">
 				<h2>Questions</h2>
-				<ul className={styles['questions-list']}>
+				<ul className="questions-list">
 					{questions.map((question) => (
-						<li key={question.questionid} className={styles['question-item']}>
-							<Link to={`/question/${question.questionid}`} className={styles['question-link']}>
-
-							
-								<div className={styles['question-content']}>
-									<div className={styles['question-user']}>
-										<div className={styles['avater']}>
-											<FontAwesomeIcon
-												className={styles['icon']}
-												icon={faUserTie}
-											/>
+						<li key={question.questionid} className="question-item">
+							<Link
+								to={`/question/${question.questionid}`}
+								className="question-link"
+							>
+								<div className="question-content">
+									<div className="question-user">
+										<div className="avater">
+											<FontAwesomeIcon className="icon" icon={faUserTie} />
 										</div>
-										<span style={{ color: '' }}>{question.username}</span>:-
+										<span style={{ color: "" }}>{question.username} :- </span>
 									</div>
-									<div className={styles['question-text']}>
-										{question.description}
-									</div>
+									<div className="question-text">{question.description}</div>
 								</div>
 							</Link>
-							<div className={styles['question-link']}>&gt;</div>
+							<div className="question-link">&gt;</div>
 						</li>
 					))}
 				</ul>

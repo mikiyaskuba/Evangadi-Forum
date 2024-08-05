@@ -1,7 +1,7 @@
-import React from 'react';
-import classes from './Footer.module.css';
-import logo from '../../assets/logo/evangadi-logo-black.png';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import React from "react";
+import classes from "./Footer.module.css";
+import logo from "../../assets/logo/evangadi-logo-black.png";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Footer = () => {
 	return (

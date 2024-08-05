@@ -1,0 +1,7 @@
+.question-li {
+	display: block;
+	width: 100%;
+}
+.question-li li {
+	padding-left: 0px;
+}
