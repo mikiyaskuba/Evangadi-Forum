@@ -1,20 +1,27 @@
 const mysql2 = require("mysql2");
+require("dotenv").config();
 
 const dbConnection = mysql2.createPool({
-	port: "8889",
-	host: "localhost",
-	user: "evangadiadmin",
-	password: "qwerty",
+  host: "localhost",
 
-	database: "evangadi1",
-	connetionLimit: 10,
+  user: process.env.USER,
+  password: process.env.PASSWORD,
+  database: process.env.DATABASE,
+//   port:5432,
+  connectionLimit: 10,
+  
+  
+}
+
+);
+
+// Test the connection
+dbConnection.execute("SELECT 1", (err, result) => {
+  if (err) {
+    console.error("Database connection error:", err.message);
+  } else {
+    console.log("Test query result:", result);
+  }
 });
 
-// dbconnection.execute("select 'test'", (err, result) => {
-//   if (err) {
-//     console.log(err.massege);
-//   } else {
-//     console.log(result);
-//   }
-// });
 module.exports = dbConnection.promise();
